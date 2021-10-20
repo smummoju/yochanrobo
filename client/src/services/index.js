@@ -1,7 +1,7 @@
-const serverURL = "http://localhost:5000";
+// const serverURL = "http://localhost:5000";
 
 const fetchPlayerDetails = (email) => {
-  return fetch(serverURL + `/api/player/get?email=${email}`)
+  return fetch(`/api/player/get?email=${email}`)
     .then((res) => res.json())
     .then(
       (result) => {
@@ -19,7 +19,7 @@ const fetchPlayerDetails = (email) => {
 const createNewPlayer = (data) => {
   const body = data;
   console.log(body);
-  return fetch(serverURL + "/api/player/create/", {
+  return fetch("/api/player/create/", {
     method: "POST", // or 'PUT'
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const createNewPlayer = (data) => {
 
 const savePlayerData = (data) => {
   const body = data;
-  return fetch(serverURL + "/api/player/update/", {
+  return fetch("/api/player/update/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
