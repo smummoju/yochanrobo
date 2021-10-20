@@ -2,11 +2,9 @@ from flask import Flask, request, jsonify
 from firebase_admin import credentials, firestore, initialize_app
 from flask_cors import CORS, cross_origin
 
-
 app = Flask(__name__,
             static_url_path='', 
             static_folder='client/build')
-
 
 CORS(app)
 
@@ -50,3 +48,6 @@ def index():
     return app.send_static_file("index.html")
 
 
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
