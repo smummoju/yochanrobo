@@ -1,0 +1,39 @@
+.cell-container {
+  /* background-color: green; */
+  padding: 0px 5px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  /* width: 3rem; */
+  overflow: hidden;
+}
+
+.position {
+  flex: 5;
+  width: 10px;
+  max-width: 10px;
+}
+
+.subscript {
+  flex: 1;
+  /* background-color: red; */
+  height: 100%;
+}
+
+.subinner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: flex-end;
+}
+
+.feedback {
+  flex: 8;
+  min-width: 10px;
+  /* max-width: 10px; */
+}
